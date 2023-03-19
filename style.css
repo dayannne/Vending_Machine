@@ -1,0 +1,331 @@
+body {
+  background: #eae8fe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 360px;
+  margin-bottom: 40px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  margin-bottom: 68px;
+}
+
+header a {
+  width: 386px;
+  height: 180px;
+  display: block;
+}
+
+header h1 img {
+  width: inherit;
+}
+
+/* 자판기 섹션 */
+.vanding {
+  box-sizing: border-box;
+  width: 360px;
+  height: 545px;
+  background: #ffffff;
+  margin-right: 18px;
+  padding: 31px 27px 28px;
+}
+
+/* 자판기 섹션 - 메뉴 선택 */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button:not(.get, .item:nth-child(2)) {
+  box-shadow: 0px 0px 3px 1px #bdbdbd;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: padding-box;
+
+  width: 94px;
+  height: 130px;
+}
+
+.menu > .item:not(.item:nth-child(2)):hover {
+  box-shadow: 0px 0px 0px 3px #6327fe;
+}
+
+.vanding .menu > button {
+  border-radius: 10px;
+}
+
+.menu > .item > .soldout {
+  width: inherit;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > .item > .soldout > img {
+  width: 70px;
+}
+
+.vanding .item img {
+  width: 36px;
+  height: 65px;
+}
+
+.vanding .name {
+  font-size: 9px;
+  margin: 6px 0;
+}
+
+.vanding .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 22px;
+  background: #6327fe;
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+/* 자판기 섹션 - 설정 setting */
+.setting {
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c d'
+    'e f'
+    'e f';
+  grid-template-columns: 200px 1fr;
+  gap: 12px;
+}
+
+.setting .money {
+  grid-area: a;
+}
+
+.return {
+  grid-area: b;
+  padding: none;
+
+  font-size: 13px;
+}
+
+.setting.form {
+  grid-area: c;
+}
+
+.deposit {
+  grid-area: d;
+}
+
+.setting > .cart {
+  grid-area: e;
+  height: 106px;
+}
+
+.get {
+  grid-area: f;
+  color: #fff;
+  box-shadow: 0px 0px 3px 1px #bdbdbd;
+  border: none;
+  background: #6327fe;
+  cursor: pointer;
+}
+
+/* .setting .cart article {
+  flex: 7;
+} */
+
+.setting #enter-price {
+  width: 100%;
+  height: 33px;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+}
+
+.setting #enter-price::placeholder {
+  color: #bdbdbd;
+}
+
+.setting button {
+  border-radius: 5px;
+}
+
+/* 소지금 total */
+
+.total {
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 {
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  background: #ffffff;
+  margin-bottom: 20px;
+  padding: 9px 27px;
+}
+
+.money {
+  height: 33px;
+  background: #eae8fe;
+  border-radius: 5px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.text {
+  flex: 7;
+}
+.amount {
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+/* 획득한 음료 current */
+
+.box2 {
+  width: 360px;
+  height: 474px;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 25px 27px;
+}
+
+.box2 h2 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.box2 .cart {
+  height: 364px;
+}
+
+/* cart 설정 */
+.cart {
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  padding: 12px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background: #eae8fe;
+}
+
+.cart::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cart::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+.cart article {
+  height: 46px;
+  background: #ffffff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 10px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+
+.cart article img {
+  width: 18px;
+}
+article .item {
+  flex: 8;
+  padding-left: 10px;
+  font-size: 9px;
+}
+
+.count {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.box2 .total-price {
+  font-size: 12px;
+  float: right;
+  margin-top: 6px;
+}
+
+@media (max-width: 738px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vanding {
+    margin: 0 0 20px;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+  header a {
+    width: 360px;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    background: #fff;
+  }
+
+  header {
+    margin-bottom: 18px;
+  }
+  header a {
+    width: 166px;
+    height: 78px;
+  }
+  .vanding,
+  .box1,
+  .box2 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .vanding,
+  .box2 {
+    height: auto;
+  }
+  /* .box1 {
+    margin: 0;
+  } */
+}
