@@ -1,16 +1,28 @@
 body,
-button,
-input {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  padding: 0;
-}
-
 h1,
 h2,
 p,
-body {
+ul,
+button {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  padding: 0;
   margin: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 a {
@@ -18,6 +30,7 @@ a {
   color: inherit;
 }
 
+/* 접근성을 위한 숨김처리 */
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
